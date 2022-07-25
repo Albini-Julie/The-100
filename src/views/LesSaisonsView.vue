@@ -4,8 +4,8 @@
   </header>
 
   <body>
-    <div class="mx-10">
-      <p class="text-center font-open-sans text-[14px]">
+    <div>
+      <p class="mx-10 text-center font-open-sans text-[14px]">
         Voici la présentation des saisons 1 à 4 avec le contexte et les nouveaux personnages de chaque, le tout sans spoil !
       </p>
       <cardSaison
@@ -17,7 +17,7 @@
         texte3="Tournage : principalement à Vancouver (Canada)"
       />
       <router-link to="/Saison1">
-        <bouton class="mx-14">Saison 1</bouton>
+        <bouton class="mx-24">Saison 1</bouton>
       </router-link>
       <cardSaison
         class="my-5"
@@ -28,7 +28,7 @@
         texte3="Tournage : principalement à Vancouver (Canada)"
       />
       <router-link to="/Saison2">
-        <bouton class="mx-14">Saison 2</bouton>
+        <bouton class="mx-24">Saison 2</bouton>
       </router-link>
       <cardSaison
         class="my-5"
@@ -39,7 +39,7 @@
         texte3="Tournage : principalement à Vancouver (Canada)"
       />
       <router-link to="/Saison3">
-        <bouton class="mx-14">Saison 3</bouton>
+        <bouton class="mx-24">Saison 3</bouton>
       </router-link>
       <cardSaison
         class="my-5"
@@ -50,7 +50,7 @@
         texte3="Tournage : principalement à Vancouver (Canada)"
       />
       <router-link to="/Saison4">
-        <bouton class="mx-14">Saison 4</bouton>
+        <bouton class="mx-24">Saison 4</bouton>
       </router-link>
     </div>
   </body>
