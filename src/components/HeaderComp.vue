@@ -36,6 +36,7 @@
                 <chevronDroit />
               </div>
             </div>
+            <FooterComp />
           </ul>
         </div>
       </div>
@@ -52,6 +53,7 @@
 import MenuComp from "../components/icons/menu.vue";
 import chevronBas from "./icons/chevronBas.vue";
 import chevronDroit from "../components/icons/chevronDroit.vue";
+import FooterComp from "../components/FooterComp.vue";
 
 export default {
   data: function () {
@@ -63,6 +65,7 @@ export default {
     MenuComp,
     chevronBas,
     chevronDroit,
+    FooterComp,
   },
   props: {
     image: String,
