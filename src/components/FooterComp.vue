@@ -1,6 +1,8 @@
 <template>
   <div class="flex flex-col items-center gap-5 bg-white p-5">
-    <img class="h-[117px] w-[169px]" src="../components/icons/logo-noir.svg" alt="site site web" />
+    <router-link to="/">
+      <img class="h-[117px] w-[169px]" src="../components/icons/logo-noir.svg" alt="site site web" />
+    </router-link>
     <div class="flex items-center justify-center gap-5">
       <a href="https://www.instagram.com/"> <logoInsta /></a>
       <a href="https://twitter.com/?lang=fr"><logoTwitter /></a>
