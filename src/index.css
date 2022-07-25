@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 /* Mettre ici les styles "globaux" */
+
+p {
+    line-height: 15px;
+}
