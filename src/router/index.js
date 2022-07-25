@@ -4,7 +4,10 @@ import LesPersonnagesView from '../views/LesPersonnagesView.vue'
 import LesSaisonsView from '../views/LesSaisonsView.vue'
 import MentionsLegalesView from '../views/MentionsLegalesView.vue'
 import MonAvisView from '../views/MonAvisView.vue'
-import SaisonView from '../views/SaisonView.vue'
+import Saison1View from '../views/Saison1View.vue'
+import Saison2View from '../views/Saison2View.vue'
+import Saison3View from '../views/Saison3View.vue'
+import Saison4View from '../views/Saison4View.vue'
 import Page404View from '../views/404.vue'
 
 const router = createRouter({
@@ -15,7 +18,10 @@ const router = createRouter({
     { path:'/LesSaisons', name: 'LesSaisons', component: LesSaisonsView},
     { path:'/MentionsLegales', name: 'MentionsLegales', component: MentionsLegalesView},
     { path:'/MonAvis', name: 'MonAvis', component: MonAvisView},
-    { path:'/Saison', name: 'Saison', component: SaisonView},
+    { path:'/Saison1', name: 'Saison1', component: Saison1View},
+    { path:'/Saison2', name: 'Saison2', component: Saison2View},
+    { path:'/Saison3', name: 'Saison3', component: Saison3View},
+    { path:'/Saison4', name: 'Saison4', component: Saison4View},
     { path:'/404', name: '404', component: Page404View},
     // ici les autre routes
   ]
