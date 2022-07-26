@@ -13,7 +13,7 @@
       La saison 1 raconte l'arrivée, l'installation et l'acclimatation du groupe des 100 sur Terre sans loi et sans adulte.
     </p>
   </div>
-  <p class="font-open-sans text-[14px]">
+  <p class="mx-2 font-open-sans text-[14px]">
     Ils vont se rendre compte des difficultés de la vie sur la planète qui leur réserve pleins de surprises... Nous suivons aussi la vie qui
     continue sur l'Arche et qui se fait de plus en plus difficle avec un problème d'oxygène.
   </p>
