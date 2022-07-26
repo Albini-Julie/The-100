@@ -8,7 +8,7 @@ import Saison1View from '../views/Saison1View.vue'
 import Saison2View from '../views/Saison2View.vue'
 import Saison3View from '../views/Saison3View.vue'
 import Saison4View from '../views/Saison4View.vue'
-import Page404View from '../views/404.vue'
+import Page404 from '../views/404.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,7 +22,7 @@ const router = createRouter({
     { path:'/Saison2', name: 'Saison2', component: Saison2View},
     { path:'/Saison3', name: 'Saison3', component: Saison3View},
     { path:'/Saison4', name: 'Saison4', component: Saison4View},
-    { path:'/404', name: '404', component: Page404View},
+    { path:'/404', name: 'Page404', component: Page404},
     // ici les autre routes
   ]
 })
