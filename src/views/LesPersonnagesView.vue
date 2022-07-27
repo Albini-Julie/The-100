@@ -1,17 +1,22 @@
 <template>
   <header>
-    <HeaderComp image="/public/lespersonnages/lespersonnages1.jpg" texte="Les personnages" />
+    <div class="lg:hidden">
+      <HeaderComp image="/public/header/HeaderLesPersonnages.jpg"></HeaderComp>
+    </div>
+    <div class="hidden lg:block">
+      <HeaderGrand class="my-10" image="/public/header/HeaderLesPersonnages.jpg" />
+    </div>
   </header>
 
   <body>
     <div class="mx-10">
-      <p class="text-center font-open-sans text-[14px]">
+      <p class="text-center font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
         Ici vous trouverez l’ensemble des personnages principaux présents entre la saison 1 et 4.
       </p>
-      <search class="mt-5" />
     </div>
+    <search class="my-10" />
 
-    <div class="m-2 mt-5 flex gap-5">
+    <div class="grid-auto-flow mx-5 grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-5">
       <div>
         <cardPerso
           image="/public/lespersonnages/lespersonnages2.jpg"
@@ -36,9 +41,7 @@
           par="Bob Morley"
         />
       </div>
-    </div>
 
-    <div class="m-2 mt-5 flex gap-5">
       <div>
         <cardPerso
           image="/public/lespersonnages/lespersonnages4.jpg"
@@ -63,9 +66,7 @@
           par="Ricky Whittle"
         />
       </div>
-    </div>
 
-    <div class="m-2 mt-5 flex gap-5">
       <div>
         <cardPerso
           image="/public/lespersonnages/lespersonnages6.jpg"
@@ -90,9 +91,7 @@
           par="Thomas McDonell"
         />
       </div>
-    </div>
 
-    <div class="m-2 mt-5 flex gap-5">
       <div>
         <cardPerso
           image="/public/lespersonnages/lespersonnages8.jpg"
@@ -117,9 +116,7 @@
           par="Christopher Larkin"
         />
       </div>
-    </div>
 
-    <div class="m-2 mt-5 flex gap-5">
       <div>
         <cardPerso
           image="/public/lespersonnages/lespersonnages10.jpg"
@@ -144,9 +141,7 @@
           par="Paige Turco"
         />
       </div>
-    </div>
 
-    <div class="m-2 mt-5 flex gap-5">
       <div>
         <cardPerso
           image="/public/lespersonnages/lespersonnages12.jpg"
@@ -171,9 +166,7 @@
           par="Isaiah Washington"
         />
       </div>
-    </div>
 
-    <div class="m-2 mt-5 flex gap-5">
       <div>
         <cardPerso
           image="/public/lespersonnages/lespersonnages14.jpg"
@@ -198,9 +191,7 @@
           par="Eve Harlow"
         />
       </div>
-    </div>
 
-    <div class="m-2 mt-5 flex gap-5">
       <div>
         <cardPerso
           image="/public/lespersonnages/lespersonnages16.jpg"
@@ -225,9 +216,7 @@
           par="Johnny Whitworth"
         />
       </div>
-    </div>
 
-    <div class="m-2 mt-5 flex gap-5">
       <div>
         <cardPerso
           image="/public/lespersonnages/lespersonnages18.jpg"
@@ -252,9 +241,7 @@
           par="Luisa Oliveira"
         />
       </div>
-    </div>
 
-    <div class="m-2 mt-5 flex gap-5">
       <div>
         <cardPerso
           image="/public/lespersonnages/lespersonnages20.jpg"
@@ -279,9 +266,7 @@
           par="Zach McGowan"
         />
       </div>
-    </div>
 
-    <div class="m-2 mt-5 flex gap-5">
       <div>
         <cardPerso
           image="/public/lespersonnages/lespersonnages22.jpg"
@@ -306,9 +291,7 @@
           par="Erica Cerra"
         />
       </div>
-    </div>
 
-    <div class="m-2 mt-5 flex gap-5">
       <div>
         <cardPerso
           image="/public/lespersonnages/lespersonnages24.jpg"
@@ -333,9 +316,7 @@
           par="Michael Beach"
         />
       </div>
-    </div>
 
-    <div class="m-2 mt-5 flex gap-5">
       <div>
         <cardPerso
           image="/public/lespersonnages/lespersonnages26.jpg"
@@ -360,9 +341,7 @@
           par="Neil Sandilands"
         />
       </div>
-    </div>
 
-    <div class="m-2 mt-5 flex gap-5">
       <div>
         <cardPerso
           image="/public/lespersonnages/lespersonnages28.jpg"
@@ -387,12 +366,9 @@
           par="Tati Gabrielle"
         />
       </div>
-    </div>
 
-    <div class="m-2 my-5 flex gap-5">
       <div>
         <cardPerso
-          class="w-1/2"
           image="/public/lespersonnages/lespersonnages30.jpg"
           prenom="Ilian"
           nom="-"
@@ -405,9 +381,11 @@
       </div>
     </div>
 
-    <router-link to="/LesSaisons">
-      <bouton class="m-auto w-1/2">Les saisons</bouton>
-    </router-link>
+    <div class="mt-10 flex justify-center">
+      <router-link to="/LesSaisons">
+        <bouton class="">Les saisons</bouton>
+      </router-link>
+    </div>
     <FooterComp class="mt-10" />
   </body>
 </template>
@@ -418,6 +396,7 @@ import search from "../components/search.vue";
 import cardPerso from "../components/cardPerso.vue";
 import bouton from "../components/bouton.vue";
 import FooterComp from "../components/FooterComp.vue";
+import HeaderGrand from "../components/HeaderGrand.vue";
 export default {
   components: {
     HeaderComp,
@@ -425,6 +404,7 @@ export default {
     cardPerso,
     bouton,
     FooterComp,
+    HeaderGrand,
   },
 };
 </script>
