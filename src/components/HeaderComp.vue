@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <header class="mb-10">
     <img class="absolute mt-[-28px]" :src="image" alt="image série" />
     <div class="relative z-30">
@@ -75,6 +75,31 @@ export default {
   props: {
     image: String,
     texte: String,
+  },
+};
+</script>
+
+-->
+
+<template>
+  <header class="mb-10">
+    <div class="mx-10 mt-5 flex items-center justify-between bg-white">
+      <img class="h-[33px] w-[47px] md:h-[75px] md:w-[93px]" src="../components/icons/logo-noir.svg" alt="logo site" />
+      <menuNoir class="md:h-[47px] md:w-[47px]" />
+    </div>
+    <img :src="image" alt="image série" />
+  </header>
+</template>
+
+
+<script>
+import menuNoir from "../components/icons/menuNoir.vue";
+export default {
+  components: {
+    menuNoir,
+  },
+  props: {
+    image: String,
   },
 };
 </script>
