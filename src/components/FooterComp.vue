@@ -12,7 +12,7 @@
       <a href="https://twitter.com/?lang=fr"><logoTwitter /></a>
       <a href="https://www.facebook.com/"><logoFacebook /></a>
     </div>
-    <router-link to="/MentionsLegales"><p class="font-open-sans md:text-[20px] xl:text-[35px]">Mentions légales</p></router-link>
+    <router-link to="/MentionsLegales"><p class="font-open-sans md:text-[20px] xl:text-[25px]">Mentions légales</p></router-link>
   </div>
 </template>
 
