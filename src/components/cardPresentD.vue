@@ -1,17 +1,24 @@
 <template>
   <div class="mx-2">
     <div class="flex items-center gap-2">
-      <div class="flex w-1/2 flex-col gap-2">
-        <h3 class="m-auto text-center font-open-sans font-semibold">{{ titre }}</h3>
-        <p class="text-center font-open-sans text-[14px]">
+      <div class="flex w-1/2 flex-col gap-2 lg:w-2/3">
+        <h3 class="m-auto text-center font-open-sans font-semibold md:text-[25px] xl:text-[30px]">{{ titre }}</h3>
+        <p class="text-center font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
           {{ texte1 }}
         </p>
+        <div class="hidden lg:block">
+          <p class="mt-3 mb-5 font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
+            {{ texte2 }}
+          </p>
+        </div>
       </div>
-      <img class="w-1/2 rounded-full" :src="image" alt="image personnage" />
+      <img class="w-1/2 rounded-full lg:w-1/3" :src="image" alt="image personnage" />
     </div>
-    <p class="mt-3 mb-5 font-open-sans text-[14px]">
-      {{ texte2 }}
-    </p>
+    <div class="lg:hidden">
+      <p class="mt-3 mb-5 font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
+        {{ texte2 }}
+      </p>
+    </div>
   </div>
 </template>
 

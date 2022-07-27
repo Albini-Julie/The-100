@@ -1,19 +1,24 @@
 <template>
   <header>
-    <HeaderComp image="/public/saison/saison1-1.jpg" texte="La saison 1" />
+    <div class="lg:hidden">
+      <HeaderComp image="/public/header/HeaderSaison1.jpg"></HeaderComp>
+    </div>
+    <div class="hidden lg:block">
+      <HeaderGrand class="my-10" image="/public/header/HeaderSaison1.jpg" />
+    </div>
   </header>
 
-  <p class="mx-10 text-center font-open-sans text-[14px]">
+  <p class="m-10 text-center font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
     Ici vous trouverez une présentation rapide de la saison 1, ainsi que les personnages importants qui apparaissent lors de cette saison.
   </p>
 
-  <div class="mx-2 my-5 flex gap-2">
+  <div class="mx-2 flex items-center gap-2">
     <img class="w-1/2 rounded-lg" src="/public/saison/saison1-2.jpg" alt="image arrivée sur Terre" />
-    <p class="w-1/2 font-open-sans text-[14px]">
+    <p class="w-1/2 font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
       La saison 1 raconte l'arrivée, l'installation et l'acclimatation du groupe des 100 sur Terre sans loi et sans adulte.
     </p>
   </div>
-  <p class="mx-2 font-open-sans text-[14px]">
+  <p class="mx-2 my-10 font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
     Ils vont se rendre compte des difficultés de la vie sur la planète qui leur réserve pleins de surprises... Nous suivons aussi la vie qui
     continue sur l'Arche et qui se fait de plus en plus difficle avec un problème d'oxygène.
   </p>
@@ -108,9 +113,11 @@
     texte2="Il sera tout au long de la série un facteur de problèmes et de péripéties."
     class="mt-5"
   />
-  <router-link to="LesPersonnages">
-    <bouton class="m-auto w-1/2">Les personnages</bouton>
-  </router-link>
+  <div class="my-10 flex justify-center">
+    <router-link to="LesPersonnages">
+      <bouton>Les personnages</bouton>
+    </router-link>
+  </div>
   <FooterComp class="mt-10" />
 </template>
 
@@ -120,6 +127,7 @@ import cardPresentG from "../components/cardPresentG.vue";
 import cardPresentD from "../components/cardPresentD.vue";
 import bouton from "../components/bouton.vue";
 import FooterComp from "../components/FooterComp.vue";
+import HeaderGrand from "../components/HeaderGrand.vue";
 export default {
   components: {
     HeaderComp,
@@ -127,6 +135,7 @@ export default {
     cardPresentD,
     bouton,
     FooterComp,
+    HeaderGrand,
   },
 };
 </script>
