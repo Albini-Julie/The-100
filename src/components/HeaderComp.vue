@@ -84,19 +84,65 @@ export default {
 <template>
   <header class="mb-10">
     <div class="mx-10 mt-5 flex items-center justify-between bg-white">
-      <img class="h-[33px] w-[47px] md:h-[75px] md:w-[93px]" src="../components/icons/logo-noir.svg" alt="logo site" />
-      <menuNoir class="md:h-[47px] md:w-[47px]" />
+      <router-link to="/">
+        <img class="h-[33px] w-[47px] md:h-[75px] md:w-[93px]" src="../components/icons/logo-noir.svg" alt="logo site" />
+      </router-link>
+      <button class="relative z-50" aria-controls="menu" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert">
+        <menuNoir class="md:h-[47px] md:w-[47px]" />
+        <span class="sr-only">Menu</span>
+      </button>
     </div>
     <img :src="image" alt="image série" />
+
+    <div
+      class="fixed inset-0 translate-x-full motion-safe:transition-transform motion-safe:duration-1000"
+      :class="[menuOuvert ? 'translate-x-0' : '']"
+    >
+      <div class="flex justify-center bg-gray-900">
+        <ul class="mb-40 sm:flex">
+          <div class="mt-20">
+            <div class="mx-20 rounded-md bg-white text-center opacity-70">
+              <h2 class="font-taviraj font-semibold opacity-100">The 100</h2>
+              <h2 class="font-taviraj font-semibold opacity-100">La série apocalyptique</h2>
+              <chevronBas class="m-auto" />
+            </div>
+            <div class="flex items-end">
+              <li class="mt-10 font-open-sans text-white"><router-link to="/LesSaisons">Les saisons</router-link></li>
+              <chevronDroit />
+            </div>
+            <div class="flex items-end">
+              <li class="mt-10 font-open-sans text-white"><router-link to="/LesPersonnages">Les Personnages</router-link></li>
+              <chevronDroit />
+            </div>
+            <div class="flex items-end">
+              <li class="mt-10 font-open-sans text-white"><router-link to="/MonAvis">Mon avis</router-link></li>
+              <chevronDroit />
+            </div>
+            <div class="flex items-end">
+              <li class="mt-10 font-open-sans text-white"><router-link to="/MentionsLegales">Mentions Légales</router-link></li>
+              <chevronDroit />
+            </div>
+          </div>
+        </ul>
+      </div>
+      <FooterComp />
+    </div>
   </header>
 </template>
 
 
 <script>
 import menuNoir from "../components/icons/menuNoir.vue";
+import FooterComp from "../components/FooterComp.vue";
 export default {
+  data: function () {
+    return {
+      menuOuvert: false,
+    };
+  },
   components: {
     menuNoir,
+    FooterComp,
   },
   props: {
     image: String,
