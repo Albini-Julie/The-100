@@ -1,20 +1,25 @@
 <template>
   <header>
-    <HeaderComp image="/public/saison/saison2-1.jpg" texte="La saison 2" />
+    <div class="lg:hidden">
+      <HeaderComp image="/public/header/HeaderSaison2.jpg"></HeaderComp>
+    </div>
+    <div class="hidden lg:block">
+      <HeaderGrand class="my-10" image="/public/header/HeaderSaison2.jpg" />
+    </div>
   </header>
 
-  <p class="mx-10 text-center font-open-sans text-[14px]">
+  <p class="mx-10 text-center font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
     Ici vous trouverez une présentation rapide de la saison 2, ainsi que les personnages importants qui apparaissent lors de cette saison.
   </p>
 
-  <div class="mx-2 my-5 flex gap-2">
+  <div class="mx-2 my-5 flex items-center gap-2">
     <img class="w-1/2 rounded-lg object-cover" src="/public/saison/saison2-2.jpg" alt="image scène de la série" />
-    <p class="w-1/2 font-open-sans text-[14px]">
+    <p class="w-1/2 font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
       La saison 2 est la découverte pour les 100 d'un nouveau clan : le clan de la montagne qui va les séparer et leur donner du fil à
       retordre.
     </p>
   </div>
-  <p class="mx-2 font-open-sans text-[14px]">
+  <p class="mx-2 font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
     Cette saison est aussi caractérisée par l'arrivée des habitants de l'Arche qui les rejoingnent sur Terre.
   </p>
 
@@ -76,6 +81,7 @@ import cardPresentG from "../components/cardPresentG.vue";
 import cardPresentD from "../components/cardPresentD.vue";
 import bouton from "../components/bouton.vue";
 import FooterComp from "../components/FooterComp.vue";
+import HeaderGrand from "../components/HeaderGrand.vue";
 export default {
   components: {
     HeaderComp,
@@ -83,6 +89,7 @@ export default {
     cardPresentD,
     bouton,
     FooterComp,
+    HeaderGrand,
   },
 };
 </script>
