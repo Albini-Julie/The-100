@@ -12,7 +12,7 @@
     Ici vous trouverez une présentation rapide de la saison 3, ainsi que les personnages importants qui apparaissent lors de cette saison.
   </p>
 
-  <div class="mx-2 my-5 flex gap-2 lg:items-center">
+  <div class="mx-2 my-5 flex gap-2 sm:items-center">
     <img class="w-1/2 rounded-lg object-cover" src="/public/saison/saison3-2.jpg" alt="image scène de la série" />
     <p class="w-1/2 font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
       La saison 3 s'interesse à une nouvelle péripétie dans la vie des 100 : en effet, une intelligence artificiel va semer la terreur sur

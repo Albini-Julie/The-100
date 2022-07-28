@@ -12,7 +12,7 @@
     Ici vous trouverez une présentation rapide de la saison 2, ainsi que les personnages importants qui apparaissent lors de cette saison.
   </p>
 
-  <div class="mx-2 my-5 flex items-center gap-2">
+  <div class="mx-2 my-5 flex gap-2 sm:items-center">
     <img class="w-1/2 rounded-lg object-cover" src="/public/saison/saison2-2.jpg" alt="image scène de la série" />
     <div class="w-1/2 xl:hidden">
       <p class="font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
