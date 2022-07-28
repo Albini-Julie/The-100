@@ -14,7 +14,10 @@
         Ici vous trouverez l’ensemble des personnages principaux présents entre la saison 1 et 4.
       </p>
     </div>
-    <search class="my-10" />
+    <div class="flex items-center justify-around">
+      <search class="my-10" />
+      <plus />
+    </div>
 
     <div class="grid-auto-flow mx-5 grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-5">
       <div>
@@ -397,6 +400,7 @@ import cardPerso from "../components/cardPerso.vue";
 import bouton from "../components/bouton.vue";
 import FooterComp from "../components/FooterComp.vue";
 import HeaderGrand from "../components/HeaderGrand.vue";
+import plus from "../components/icons/plus.vue";
 export default {
   components: {
     HeaderComp,
@@ -405,6 +409,7 @@ export default {
     bouton,
     FooterComp,
     HeaderGrand,
+    plus,
   },
 };
 </script>
