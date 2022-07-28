@@ -14,14 +14,27 @@
 
   <div class="mx-2 my-5 flex items-center gap-2">
     <img class="w-1/2 rounded-lg object-cover" src="/public/saison/saison2-2.jpg" alt="image scène de la série" />
-    <p class="w-1/2 font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
-      La saison 2 est la découverte pour les 100 d'un nouveau clan : le clan de la montagne qui va les séparer et leur donner du fil à
-      retordre.
+    <div class="w-1/2 xl:hidden">
+      <p class="font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
+        La saison 2 est la découverte pour les 100 d'un nouveau clan : le clan de la montagne qui va les séparer et leur donner du fil à
+        retordre.
+      </p>
+    </div>
+    <div class="hidden w-1/2 xl:block">
+      <p class="font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
+        La saison 2 est la découverte pour les 100 d'un nouveau clan : le clan de la montagne qui va les séparer et leur donner du fil à
+        retordre.
+      </p>
+      <p class="font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
+        Cette saison est aussi caractérisée par l'arrivée des habitants de l'Arche qui les rejoingnent sur Terre.
+      </p>
+    </div>
+  </div>
+  <div class="xl:hidden">
+    <p class="mx-2 font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
+      Cette saison est aussi caractérisée par l'arrivée des habitants de l'Arche qui les rejoingnent sur Terre.
     </p>
   </div>
-  <p class="mx-2 font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
-    Cette saison est aussi caractérisée par l'arrivée des habitants de l'Arche qui les rejoingnent sur Terre.
-  </p>
 
   <cardPresentG
     image="/public/lespersonnages/lespersonnages14.jpg"
@@ -69,9 +82,11 @@
     class="mt-5"
   />
 
-  <router-link to="LesPersonnages">
-    <bouton class="m-auto w-1/2">Les personnages</bouton>
-  </router-link>
+  <div class="my-10 flex justify-center">
+    <router-link to="LesPersonnages">
+      <bouton class="m-auto">Les personnages</bouton>
+    </router-link>
+  </div>
   <FooterComp class="mt-10" />
 </template>
 
