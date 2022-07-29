@@ -82,13 +82,15 @@ export default {
 -->
 
 <template>
-  <header class="mb-10">
-    <div class="mx-10 mt-5 flex items-center justify-between bg-white">
+  <header class="mb-10 dark:bg-gray-900 dark:text-white">
+    <div class="mx-10 mt-5 flex items-center justify-between bg-white dark:bg-gray-900">
       <router-link to="/">
-        <img class="h-[33px] w-[47px] md:h-[75px] md:w-[93px]" src="../components/icons/logo-noir.svg" alt="logo site" />
+        <img class="h-[33px] w-[47px] dark:hidden md:h-[75px] md:w-[93px]" src="../components/icons/logo-noir.svg" alt="logo site" />
+        <img class="hidden h-[33px] w-[47px] dark:block md:h-[75px] md:w-[93px]" src="../components/icons/logo-blanc.svg" alt="logo site" />
       </router-link>
       <button class="relative z-50" aria-controls="menu" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert">
-        <menuNoir class="md:h-[47px] md:w-[47px]" />
+        <menuNoir class="dark:hidden md:h-[47px] md:w-[47px]" />
+        <menuBlanc class="hidden dark:block md:h-[47px] md:w-[47px]" />
         <span class="sr-only">Menu</span>
       </button>
     </div>
@@ -134,6 +136,7 @@ export default {
 <script>
 import menuNoir from "../components/icons/menuNoir.vue";
 import FooterComp from "../components/FooterComp.vue";
+import menuBlanc from "../components/icons/menu.vue";
 export default {
   data: function () {
     return {
@@ -143,6 +146,7 @@ export default {
   components: {
     menuNoir,
     FooterComp,
+    menuBlanc,
   },
   props: {
     image: String,

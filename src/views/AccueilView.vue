@@ -7,7 +7,7 @@
       <HeaderGrand class="my-10" image="/public/header/HeaderAccueil.jpg" />
     </div>
   </header>
-  <body class="">
+  <body class="dark:bg-gray-900 dark:text-white">
     <div class="mx-2 flex h-max gap-3 md:items-center">
       <img class="w-2/5 rounded-lg object-cover lg:w-3/5" src="/public/accueil/accueil2.jpg" alt="image radiation" />
       <div class="w-3/5 lg:w-2/5">
@@ -38,7 +38,7 @@
       </div>
     </div>
 
-    <div class="xl-mx-5 mx-2 mb-10 flex h-max gap-3 md:items-center">
+    <div class="xl-mx-5 mx-2 mb-10 flex h-max gap-3 dark:bg-gray-900 md:items-center">
       <div class="w-3/5 lg:w-2/5">
         <p class="font-open-sans text-[14px] md:text-[20px] xl:text-[35px]">
           Au bout de 97 ans, la Terre devrait être à nouveau habitable: afin de s'en assurer, les dirigeants de l'Arche décide
@@ -51,8 +51,9 @@
       </div>
       <img class="w-2/5 rounded-lg object-cover lg:w-3/5" src="/public/accueil/accueil4.jpg" alt="image radiation" />
     </div>
+
+    <FooterComp />
   </body>
-  <FooterComp />
 </template>
 
 <script>

@@ -8,7 +8,7 @@
     </div>
   </header>
 
-  <body>
+  <body class="dark:bg-gray-900 dark:text-white">
     <div>
       <p class="mx-10 text-center font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
         Voici la présentation des saisons 1 à 4 avec le contexte et les nouveaux personnages de chaque, le tout sans spoil !
@@ -66,8 +66,8 @@
         </router-link>
       </div>
     </div>
+    <FooterComp class="mt-10" />
   </body>
-  <FooterComp class="mt-10" />
 </template>
 
 <script>

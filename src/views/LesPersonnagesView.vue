@@ -8,7 +8,7 @@
     </div>
   </header>
 
-  <body>
+  <body class="dark:bg-gray-900 dark:text-white">
     <div class="mx-10">
       <p class="text-center font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
         Ici vous trouverez l’ensemble des personnages principaux présents entre la saison 1 et 4.
@@ -16,7 +16,8 @@
     </div>
     <div class="flex items-center justify-around">
       <search class="my-10" />
-      <plus />
+      <plus class="dark:hidden" />
+      <plusBlanc class="hidden dark:block" />
     </div>
 
     <div class="grid-auto-flow mx-5 grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-5">
@@ -401,6 +402,7 @@ import bouton from "../components/bouton.vue";
 import FooterComp from "../components/FooterComp.vue";
 import HeaderGrand from "../components/HeaderGrand.vue";
 import plus from "../components/icons/plus.vue";
+import plusBlanc from "../components/icons/plusBlanc.vue";
 export default {
   components: {
     HeaderComp,
@@ -410,6 +412,7 @@ export default {
     FooterComp,
     HeaderGrand,
     plus,
+    plusBlanc,
   },
 };
 </script>

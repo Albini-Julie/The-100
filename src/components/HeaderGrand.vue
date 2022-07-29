@@ -1,8 +1,13 @@
 <template>
   <header>
-    <div class="flex items-center justify-around bg-white">
+    <div class="flex items-center justify-around bg-white dark:bg-gray-900 dark:text-white">
       <router-link to="/">
-        <img class="h-[71px] w-[102px] xl:h-[111px] xl:w-[142px]" src="../components/icons/logo-noir.svg" alt="logo site" />
+        <img class="h-[71px] w-[102px] dark:hidden xl:h-[111px] xl:w-[142px]" src="../components/icons/logo-noir.svg" alt="logo site" />
+        <img
+          class="hidden h-[71px] w-[102px] dark:block xl:h-[111px] xl:w-[142px]"
+          src="../components/icons/logo-blanc.svg"
+          alt="logo site"
+        />
       </router-link>
       <router-link to="/LesSaisons">
         <p class="font-open-sans text-[25px]">Les saisons</p>

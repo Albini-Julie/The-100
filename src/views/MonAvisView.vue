@@ -8,7 +8,7 @@
     </div>
   </header>
 
-  <body>
+  <body class="dark:bg-gray-900 dark:text-white">
     <p class="mx-10 mt-10 text-center font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">
       Je vais vous donner dans cette page mon avis sur la série, mon personnage préféré, et ma saison préférée.
     </p>
@@ -71,8 +71,9 @@
         toutes âges sont tirées au sort pour aller se battre dans une arène-forêt
       </p>
     </div>
+
+    <FooterComp class="mt-10" />
   </body>
-  <FooterComp class="mt-10" />
 </template>
 
 <script>
