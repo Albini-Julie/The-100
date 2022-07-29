@@ -103,26 +103,34 @@ export default {
       <div class="flex justify-center bg-gray-900">
         <ul class="mb-40 sm:flex">
           <div class="mt-20">
-            <div class="mx-20 rounded-md bg-white text-center opacity-70">
+            <div class="mx-20 rounded-md bg-white text-center opacity-70 dark:text-black">
               <h2 class="font-taviraj font-semibold opacity-100">The 100</h2>
               <h2 class="font-taviraj font-semibold opacity-100">La série apocalyptique</h2>
               <chevronBas class="m-auto" />
             </div>
             <div class="flex items-end">
               <li class="mt-10 font-open-sans text-white"><router-link to="/LesSaisons">Les saisons</router-link></li>
-              <chevronDroit />
+              <router-link to="/LesSaisons">
+                <chevronDroit />
+              </router-link>
             </div>
             <div class="flex items-end">
               <li class="mt-10 font-open-sans text-white"><router-link to="/LesPersonnages">Les Personnages</router-link></li>
-              <chevronDroit />
+              <router-link to="/LesPersonnages">
+                <chevronDroit />
+              </router-link>
             </div>
             <div class="flex items-end">
               <li class="mt-10 font-open-sans text-white"><router-link to="/MonAvis">Mon avis</router-link></li>
-              <chevronDroit />
+              <router-link to="/MonAvis">
+                <chevronDroit />
+              </router-link>
             </div>
             <div class="flex items-end">
               <li class="mt-10 font-open-sans text-white"><router-link to="/MentionsLegales">Mentions Légales</router-link></li>
-              <chevronDroit />
+              <router-link to="/MentionsLegales">
+                <chevronDroit />
+              </router-link>
             </div>
           </div>
         </ul>
@@ -137,6 +145,7 @@ export default {
 import menuNoir from "../components/icons/menuNoir.vue";
 import FooterComp from "../components/FooterComp.vue";
 import menuBlanc from "../components/icons/menu.vue";
+import chevronDroit from "../components/icons/chevronDroit.vue";
 export default {
   data: function () {
     return {
@@ -147,6 +156,7 @@ export default {
     menuNoir,
     FooterComp,
     menuBlanc,
+    chevronDroit,
   },
   props: {
     image: String,
