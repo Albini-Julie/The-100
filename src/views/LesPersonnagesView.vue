@@ -21,7 +21,28 @@
     </div>
 
     <div class="grid-auto-flow mx-5 grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-5">
-      <div>
+      <div v-for="perso in listePerso" :key="perso.id">
+        <div class="border-2 border-gray-900 dark:border-white">
+          <img class="" :src="perso.Image" alt="image personnage" />
+          <div class="ml-1">
+            <p class="font-open-sans text-[20px] xl:text-[25px]">Prénom : {{ perso.Prénom }}</p>
+            <p class="font-open-sans text-[20px] xl:text-[25px]">Nom : {{ perso.Nom }}</p>
+            <p class="font-open-sans text-[20px] xl:text-[25px]">Surnoms : {{ perso.Surnoms }}</p>
+            <p class="font-open-sans text-[20px] xl:text-[25px]">Qualité : {{ perso.Qualité }}</p>
+            <p class="font-open-sans text-[20px] xl:text-[25px]">Défaut : {{ perso.Défaut }}</p>
+            <p class="font-open-sans text-[20px] xl:text-[25px]">Saisons : {{ perso.Saisons }}</p>
+            <p class="font-open-sans text-[20px] xl:text-[25px]">Par : {{ perso.Par }}</p>
+          </div>
+          <div class="my-2 flex justify-center gap-10">
+            <poubelle class="dark:hidden" />
+            <poubelleBlanc class="hidden dark:block" />
+            <crayon class="dark:hidden" />
+            <crayonBlanc class="hidden dark:block" />
+          </div>
+        </div>
+      </div>
+
+      <!--      <div>
         <cardPerso
           image="/public/lespersonnages/lespersonnages2.jpg"
           prenom="Clarke"
@@ -382,7 +403,7 @@
           saisons="4"
           par="Chai Romruen"
         />
-      </div>
+      </div> -->
     </div>
 
     <div class="mt-10 flex justify-center">
@@ -395,6 +416,21 @@
 </template>
 
 <script>
+import {
+  getFirestore, // Obtenir le Firestore
+  collection, // Utiliser une collection de documents
+  onSnapshot, // Demander une liste de documents d'une collection, en les synchronisant
+  query, // Permet d'effectuer des requêtes sur Firestore
+  orderBy, // Permet de demander le tri d'une requête query
+} from "https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js";
+
+// Cloud Storage : import des fonctions
+import {
+  getStorage, // Obtenir le Cloud Storage
+  ref, // Pour créer une référence à un fichier à uploader
+  getDownloadURL, // Permet de récupérer l'adress complète d'un fichier du Storage
+} from "https://www.gstatic.com/firebasejs/9.9.1/firebase-storage.js";
+
 import HeaderComp from "../components/HeaderComp.vue";
 import search from "../components/search.vue";
 import cardPerso from "../components/cardPerso.vue";
@@ -403,7 +439,53 @@ import FooterComp from "../components/FooterComp.vue";
 import HeaderGrand from "../components/HeaderGrand.vue";
 import plus from "../components/icons/plus.vue";
 import plusBlanc from "../components/icons/plusBlanc.vue";
+import poubelle from "../components/icons/poubelle.vue";
+import crayon from "../components/icons/crayon.vue";
+import poubelleBlanc from "../components/icons/poubelleBlanc.vue";
+import crayonBlanc from "../components/icons/crayonBlanc.vue";
+
 export default {
+  data() {
+    return {
+      listePerso: [],
+    };
+  },
+  mounted() {
+    const local = this;
+    this.getPerso(local);
+  },
+  methods: {
+    async getPerso(local) {
+      // Obtenir Firestore
+      const firestore = getFirestore();
+      // Base de données (collection)  document participant
+      const dbPerso = collection(firestore, "Personnages");
+      // Liste des participants triés sur leur nom
+      const q = query(dbPerso, orderBy("Prénom", "asc"));
+      await onSnapshot(q, (snapshot) => {
+        local.listePerso = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+        console.log(local.listePerso);
+        // Récupération des images de chaque participant
+        // parcours de la liste
+        this.listePerso.forEach(function (personne) {
+          // Obtenir le Cloud Storage
+          const storage = getStorage();
+          // Récupération de l'image par son nom de fichier
+          const spaceRef = ref(storage, "ImgPerso/" + personne.Image);
+          // Récupération de l'url complète de l'image
+          getDownloadURL(spaceRef)
+            .then((url) => {
+              // On remplace le nom du fichier
+              // Par l'url complète de la photo
+              personne.Image = url;
+            })
+            .catch((error) => {
+              console.log("erreur downloadUrl", error);
+            });
+        });
+      });
+    },
+  },
   components: {
     HeaderComp,
     search,
@@ -413,6 +495,10 @@ export default {
     HeaderGrand,
     plus,
     plusBlanc,
+    poubelle,
+    crayon,
+    poubelleBlanc,
+    crayonBlanc,
   },
 };
 </script>
