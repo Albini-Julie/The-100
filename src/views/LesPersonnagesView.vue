@@ -31,8 +31,13 @@
         </div>
       </div>
 
-      <plus class="dark:hidden" />
-      <plusBlanc class="hidden dark:block" />
+      <div>
+        <span title="Ajouter un personnage" />
+        <router-link to="/Create">
+          <plus class="dark:hidden" />
+          <plusBlanc class="hidden dark:block" />
+        </router-link>
+      </div>
     </div>
 
     <div class="grid-auto-flow mx-5 grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-5">
