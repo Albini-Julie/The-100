@@ -10,7 +10,7 @@
 
   <body class="dark:bg-gray-900 dark:text-white">
     <div class="mx-10">
-      <p class="text-center font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">Vous allez ajouter un artiste à cette liste !</p>
+      <p class="text-center font-open-sans text-[14px] md:text-[20px] xl:text-[25px]">Vous allez ajouter un personnage à cette liste !</p>
     </div>
 
     <form enctype="multipart/form-data" @submit.prevent="createPerso">
@@ -30,7 +30,7 @@
                 <input
                   class="form-control border-b-2 border-b-black md:text-[20px] xl:text-[25px]"
                   placeholder="Prénom du personnage"
-                  v-model="perso.prenom"
+                  v-model="perso.Prénom"
                   required
                 />
               </div>
@@ -40,7 +40,7 @@
                   <span>Nom</span>
                 </div>
                 <input
-                  v-model="perso.nom"
+                  v-model="perso.Nom"
                   class="form-control form-control border-b-2 border-b-black md:text-[20px] xl:text-[25px]"
                   placeholder="Nom du personnage"
                   key="required"
@@ -53,7 +53,7 @@
                 </div>
                 <input
                   class="border-b-2 border-b-black md:text-[20px] xl:text-[25px]"
-                  v-model="perso.surnoms"
+                  v-model="perso.Surnoms"
                   placeholder="Surnoms du personnage"
                   required
                 />
@@ -65,7 +65,7 @@
                 </div>
                 <input
                   class="border-b-2 border-b-black md:text-[20px] xl:text-[25px]"
-                  v-model="perso.qualite"
+                  v-model="perso.Qualité"
                   placeholder="Qualité du personnage"
                   required
                 />
@@ -77,7 +77,7 @@
                 </div>
                 <input
                   class="border-b-2 border-b-black md:text-[20px] xl:text-[25px]"
-                  v-model="perso.defaut"
+                  v-model="perso.Défaut"
                   placeholder="Défaut du personnage"
                   required
                 />
@@ -89,7 +89,7 @@
                 </div>
                 <input
                   class="border-b-2 border-b-black md:text-[20px] xl:text-[25px]"
-                  v-model="perso.saisons"
+                  v-model="perso.Saisons"
                   placeholder="Saisons du personnage"
                   required
                 />
@@ -101,7 +101,7 @@
                 </div>
                 <input
                   class="border-b-2 border-b-black md:text-[20px] xl:text-[25px]"
-                  v-model="perso.acteur"
+                  v-model="perso.Par"
                   placeholder="Acteur du personnage"
                   required
                 />
@@ -200,14 +200,14 @@ export default {
     return {
       imageData: null,
       perso: {
-        prenom: null,
-        nom: null,
-        surnoms: null,
-        qualite: null,
-        defaut: null,
-        saisons: null,
-        acteur: null,
-        image: null,
+        Prénom: null,
+        Nom: null,
+        Surnoms: null,
+        Qualité: null,
+        Défaut: null,
+        Saisons: null,
+        Par: null,
+        Image: null,
       },
     };
   },
@@ -220,7 +220,7 @@ export default {
     previewImage: function (event) {
       this.file = this.$refs.file.files[0];
 
-      this.perso.image = this.file.name;
+      this.perso.Image = this.file.name;
 
       var input = event.target;
 
@@ -238,13 +238,13 @@ export default {
     async createPerso() {
       const storage = getStorage();
 
-      const refStorage = ref(storage, "ImgPerso/" + this.perso.image);
+      const refStorage = ref(storage, "ImgPerso/" + this.perso.Image);
 
       await uploadString(refStorage, this.imageData, "data_url").then((snapshot) => {
         console.log("Uploaded a base64 string");
 
         const db = getFirestore();
-        const docRef = addDoc(collection(db, "personnages"), this.perso);
+        const docRef = addDoc(collection(db, "Personnages"), this.perso);
       });
       this.$router.push("/LesPersonnages");
     },

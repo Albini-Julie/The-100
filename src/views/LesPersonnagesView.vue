@@ -56,8 +56,12 @@
           <div class="my-2 flex justify-center gap-10">
             <poubelle class="dark:hidden" />
             <poubelleBlanc class="hidden dark:block" />
-            <crayon class="dark:hidden" />
-            <crayonBlanc class="hidden dark:block" />
+            <span title="modifier ce personnage">
+              <RouterLink :to="{ name: 'Update', params: { id: perso.id } }">
+                <crayon class="dark:hidden" />
+                <crayonBlanc class="hidden dark:block" />
+              </RouterLink>
+            </span>
           </div>
         </div>
       </div>
