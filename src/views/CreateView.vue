@@ -28,7 +28,7 @@
                   <span>Prénom</span>
                 </div>
                 <input
-                  class="form-control border-b-2 border-b-black md:text-[20px] xl:text-[25px]"
+                  class="form-control border-b-2 border-b-black md:text-[20px] lg:w-[500px] xl:text-[25px]"
                   placeholder="Prénom du personnage"
                   v-model="perso.Prénom"
                   required
@@ -41,7 +41,7 @@
                 </div>
                 <input
                   v-model="perso.Nom"
-                  class="form-control form-control border-b-2 border-b-black md:text-[20px] xl:text-[25px]"
+                  class="form-control form-control border-b-2 border-b-black md:text-[20px] lg:w-[500px] xl:text-[25px]"
                   placeholder="Nom du personnage"
                   key="required"
                 />
@@ -52,7 +52,7 @@
                   <span class="font-work-sans text-[20px] font-semibold md:text-[20px] xl:text-[25px]">Surnoms</span>
                 </div>
                 <input
-                  class="border-b-2 border-b-black md:text-[20px] xl:text-[25px]"
+                  class="border-b-2 border-b-black md:text-[20px] lg:w-[500px] xl:text-[25px]"
                   v-model="perso.Surnoms"
                   placeholder="Surnoms du personnage"
                   required
@@ -64,7 +64,7 @@
                   <span class="font-work-sans text-[20px] font-semibold md:text-[20px] xl:text-[25px]">Qualité</span>
                 </div>
                 <input
-                  class="border-b-2 border-b-black md:text-[20px] xl:text-[25px]"
+                  class="border-b-2 border-b-black md:text-[20px] lg:w-[500px] xl:text-[25px]"
                   v-model="perso.Qualité"
                   placeholder="Qualité du personnage"
                   required
@@ -76,7 +76,7 @@
                   <span class="font-work-sans text-[20px] font-semibold md:text-[20px] xl:text-[25px]">Défaut</span>
                 </div>
                 <input
-                  class="border-b-2 border-b-black md:text-[20px] xl:text-[25px]"
+                  class="border-b-2 border-b-black md:text-[20px] lg:w-[500px] xl:text-[25px]"
                   v-model="perso.Défaut"
                   placeholder="Défaut du personnage"
                   required
@@ -88,7 +88,7 @@
                   <span class="font-work-sans text-[20px] font-semibold md:text-[20px] xl:text-[25px]">Saisons</span>
                 </div>
                 <input
-                  class="border-b-2 border-b-black md:text-[20px] xl:text-[25px]"
+                  class="border-b-2 border-b-black md:text-[20px] lg:w-[500px] xl:text-[25px]"
                   v-model="perso.Saisons"
                   placeholder="Saisons du personnage"
                   required
@@ -100,7 +100,7 @@
                   <span class="font-work-sans text-[20px] font-semibold md:text-[20px] xl:text-[25px]">Acteur</span>
                 </div>
                 <input
-                  class="border-b-2 border-b-black md:text-[20px] xl:text-[25px]"
+                  class="border-b-2 border-b-black md:text-[20px] lg:w-[500px] xl:text-[25px]"
                   v-model="perso.Par"
                   placeholder="Acteur du personnage"
                   required
@@ -112,7 +112,7 @@
                   <span>Photo</span>
                 </div>
                 <input
-                  class="form-control border-b-2 border-b-black md:text-[20px] xl:text-[25px]"
+                  class="form-control border-b-2 border-b-black md:text-[20px] lg:w-[500px] xl:text-[25px]"
                   type="file"
                   ref="file"
                   id="file"
