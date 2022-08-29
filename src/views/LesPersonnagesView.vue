@@ -54,8 +54,12 @@
             <p class="font-open-sans text-[20px] xl:text-[25px]">Par : {{ perso.Par }}</p>
           </div>
           <div class="my-2 flex justify-center gap-10">
-            <poubelle class="dark:hidden" />
-            <poubelleBlanc class="hidden dark:block" />
+            <span title="supprimer ce personnage">
+              <RouterLink :to="{ name: 'Delete', params: { id: perso.id } }">
+                <poubelle class="dark:hidden" />
+                <poubelleBlanc class="hidden dark:block" />
+              </RouterLink>
+            </span>
             <span title="modifier ce personnage">
               <RouterLink :to="{ name: 'Update', params: { id: perso.id } }">
                 <crayon class="dark:hidden" />

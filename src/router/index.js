@@ -11,6 +11,7 @@ import Saison4View from '../views/Saison4View.vue'
 import Page404 from '../views/404.vue'
 import CreateView from "../views/CreateView.vue"
 import UpdateView from "../views/UpdateView.vue"
+import DeleteView from "../views/DeleteView.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,7 @@ const router = createRouter({
     { path:'/404', name: 'Page404', component: Page404},
     { path:'/Create', name: 'Create', component: CreateView},
     { path:'/Update', name: 'Update', component: UpdateView},
+    {path: '/Delete', name: 'Delete', component: DeleteView}
     // ici les autre routes
   ]
 })
